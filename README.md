@@ -5,7 +5,7 @@ Diary Theme for Jekyll
 
 A simple but beautiful theme for [Jekyll](http://jekyllrb.com/) blogs.
 
-![Screenshot](http://i1.piimg.com/588926/55881e6f69daa90c.jpg)
+![Screenshot](http://i2.muimg.com/588926/15b8a32295edd802.jpg)
 
 
 Features
@@ -50,10 +50,13 @@ nav:
 Demo
 -------
 
-You can see a demo of Solar [right here on GitHub Pages.](https://soyaine.github.io/jekyll-theme-diary/)
+You can see a demo of Diary [right here on GitHub Pages.](https://soyaine.github.io/jekyll-theme-diary/)
 
 You can also see [my website of Diary.](https://soyaine.github.io/diary/)
 
+Issue
+-------
+Welcome suggestion in [issues](https://github.com/soyaine/jekyll-theme-diary/issues/new).
 
 License
 ---------
