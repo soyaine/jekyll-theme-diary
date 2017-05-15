@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <title>{{ page.title}}</title>
+</head>
+<body>
+{% include header.html %}
+<div class="paper paper-before" id="paperBefore"></div>
+<div class="paper paper-article">
+    <!-- Date No. sign -->
+    <a href="#" title="点击查看日历">
+    <span id="openBtn" class="date-index">
+        No.
+        <!--Page NO.-->
+		{{ page.id | slice: -3, 3}}<br>
+		 <!--Date yyyy.mm.dd-->
+        {{ page.date | to_string | slice: 0, 10 }}
+    </span>
+    </a>
+	
+    <!--Calendar body-->
+    {% include calendar.html %}
+
+    <!--Article body-->
+    <article class="typo">
+        {{ content }}
+		<link rel="stylesheet" href="/diary/css/typo.css">
+    </article>
+</div>
+
+{% include footer.html %}
+</body>
+<!--<script type="text/javascript" src="/diary/js/calendar.js"></script>-->
+</html>

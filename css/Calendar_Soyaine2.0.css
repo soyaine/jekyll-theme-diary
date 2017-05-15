@@ -1,0 +1,78 @@
+/*日历部分*/
+.calendar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #fafafa;
+}
+
+/*居中*/
+.calendar,  div.cal-body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.cal-year {
+    text-align: center;
+}
+
+div.cal-body {
+    position: absolute;
+
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+
+    /*background: #e4dcdb;*/
+}
+
+
+
+#calendar li {
+    display: inline-block;
+    /*box-sizing: content-box;*/
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    margin: .1em .3em;
+
+    text-align: center;
+    vertical-align: middle;
+    /*http://stackoverflow.com/questions/8543859/css-vertical-alignment-text-inside-li*/
+}
+
+#calendar ul.cal-body li {
+    /*border: 2px solid #5e5d5d;*/
+    border-radius: 50%;
+    /*box-shadow: .2em .1em .15em #ccc;*/
+    /*display: table-cell;*/
+    /*margin: 1em 1em;*/
+}
+
+#calendar ul {
+    vertical-align: middle;
+    padding: 0 0;
+
+    /*display: inline-block;*/
+    /*text-align: justify;*/
+
+    /*column-count: 7;*/
+    /*column-gap: 1em;*/
+
+
+    /*-=============可行===============*/
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content:space-between;
+}
+
+@media screen and (max-width: 599px){
+    nav {
+        display: inline;
+    }
+}

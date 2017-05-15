@@ -1,0 +1,132 @@
+/*日历部分*/
+.calendar {
+    z-index: 100;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    padding-top: 1.86em;
+
+    background: #fff;
+    font-weight: 100;
+    color: #60575c;
+}
+
+/*Close Button*/
+#closeBtn {
+    position: absolute;
+    top: .6em;
+    right: .6em;
+    color: #dfdfe2;
+
+    font-size: 2em;
+}
+
+#closeBtn:hover {
+    color: #5e5d5d;
+    transform: rotate(-90deg);
+}
+
+/*居中*/
+.calendar,  div.cal-body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.cal-year {
+    text-align: center;
+    vertical-align: bottom;
+    font-family: "Colonna MT";
+    font-size: 5em;
+    color: #fc8f96;
+}
+
+div.cal-year label {
+    font-family: "Colonna MT";
+}
+
+div.cal-year .btn {
+    vertical-align: middle;
+    font-size: .5em;
+}
+
+div.cal-year .btn:hover {
+    font-size: .8em;
+}
+
+ul.cal-week {
+    font-weight: 600;
+}
+
+ul.cal-month {
+    font-size: .9em;
+}
+
+ul.cal-month:hover {
+    color: #60575c;
+    border-bottom: 1px solid #dfdfe2;
+    border-top: 1px solid #dfdfe2;
+}
+
+ul.cal-month li {
+    cursor: pointer;
+}
+
+li.cal-this-month {
+    font-weight: 900;
+    font-size-adjust: none;
+}
+
+
+#calendar ul {
+    padding: 0 0;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content:space-between;
+}
+
+#calendar li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    margin: .1em .3em;
+    text-align: center;
+    /*vertical-align: middle;*/
+    /*http://stackoverflow.com/questions/8543859/css-vertical-alignment-text-inside-li*/
+}
+
+
+li.cal-this.cal-day {
+    font-weight: 400;
+    background-color: #fc8f96;
+    color: #fff;
+    /*border: 1px solid #5e5d5d;*/
+    border-radius: 50%;
+}
+
+li.cal-day a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fc8f96;
+}
+
+li.cal-day:hover {
+    border: 1px solid #dfdfe2;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #fafafa;
+}
+
+li.cal-link {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 599px){
+    nav {
+        display: inline;
+    }
+}

@@ -1,0 +1,316 @@
+* {
+    font-family: "Microsoft YaHei UI";
+}
+body {
+    margin: 0 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*所有按钮的动画*/
+.btn, .btn i {
+    cursor: pointer;
+
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+/****** Header *******/
+header {
+    z-index: -10;
+    padding: 1.6rem 10rem 4rem;
+    color: #aaa6ab;
+    background-color: #fafafa;
+    font-weight: 300;
+    font-size: large;
+    box-sizing: border-box;
+}
+
+span.logo {
+    left: 0;
+    width: auto;
+}
+
+nav {
+    position: relative;
+
+}
+
+nav ul {
+    padding-left: 0;
+    display: block;
+    position: relative;
+    align-content: stretch;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 3.6em 0 0;
+    list-style: none;
+    color: #aaa6ab;
+}
+
+nav ul li a {
+	 color: #aaa6ab;
+}
+
+nav ul li a:hover {
+	 color: #5e5d5d;
+}
+
+nav ul li:first-child {
+    margin-right: 5em;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-button {
+    position: fixed;
+    height: 100%;
+    width: 6rem;
+    align-content: center;
+}
+
+.nav-button i {
+    color: #dfdfe2;
+    position: absolute;
+    top: 46%;
+}
+
+#oldPostBtn {
+    left: 0;
+}
+
+#nextPostBtn, #nextPostBtn i {
+    right: 0;
+}
+
+.nav-button:hover i {
+    font-size: 5em;
+    color: #5e5d5d;
+}
+/****** The paper body *******/
+.date-index {
+    z-index: 10;
+    text-align: center;
+    position: absolute;
+    top: 1.1em;
+    right: 0;
+    transform: rotate(45deg);
+
+    font-family: "Algerian";
+    font-size: 1.4em;
+    color: #e4dcdb;
+
+    -webkit-transition: text-shadow, color, color 1s;
+    -moz-transition: text-shadow, color 1s;
+    -ms-transition: text-shadow, color 1s;
+    -o-transition: text-shadow, color 1s;
+    transition: text-shadow, color 1s;
+}
+
+.date-index:hover {
+    color: #fc8f96;
+    text-shadow: #dfdfe2 1px 1px 5px;
+}
+
+.paper, .paper-before {
+    box-sizing: border-box;
+    position: relative;
+    top: -2.5rem;
+    /*z-index: 10;*/
+    margin: .2rem 9.5rem -3rem;
+/*    min-width: 700px;*/
+/*    min-height: 768px;*/
+    padding: 5rem 5rem;
+    background-color: #fff;
+    box-shadow:
+            0 0 3px rgba(0, 0, 0, 0.2),
+            -5px -5px 10px rgba(0, 0, 0, 0.1),
+            -10px -10px 40px rgba(0, 0, 0, 0.12),
+            inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.paper-before {
+    box-shadow:
+            0 0 3px rgba(0, 0, 0, 0.2),
+            -5px -5px 10px rgba(0, 0, 0, 0.1),
+            -10px -10px 40px rgba(0, 0, 0, 0.12),
+            inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.paper-article:before {
+    z-index: -10;
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    content: '';
+    left: 0px;
+    top: 10px;
+    background: transparent;
+
+    -webkit-transform: skew(5deg) rotate(-5deg);
+    -moz-transform: skew(5deg) rotate(5deg);
+    -ms-transform: skew(5deg) rotate(5deg);
+    -o-transform: skew(5deg) rotate(5deg);
+    transform: skew(30deg) rotate(5deg);
+
+    -webkit-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: -10px -10px 12px rgba(0, 0, 0, 0.3);
+}
+
+.paper-before {
+    display: block;
+    content: "";
+    /*z-index: 0;*/
+    width: 70%;
+    position: absolute;
+    height: 20rem;
+    /*left: 0;*/
+    /*margin: 0;*/
+
+    top: 2.5rem;
+    /*padding: 0;*/
+    transform: rotate(-9deg) translate(-2.6rem, 5rem);
+}
+
+
+
+/****** Footer *******/
+footer {
+    z-index: 999;
+    position: relative;
+    /*bottom: 4rem;*/
+    padding: 3rem 10rem;
+    color: #aaa6ab;
+    background-color: #fafafa;
+    font-weight: 100;
+    /*font-size: small;*/
+    box-sizing: border-box;
+}
+
+footer div {
+    position: relative;
+}
+
+footer span.copyright {
+    color: #5e5d5d;
+    font-weight: bold;
+    width: inherit;
+}
+
+.comment {
+    position: relative;
+    margin: 1em 1px;
+}
+
+.comment a {
+	color: #aaa6ab;
+}
+
+.comment a:hover {
+	font-weight: 400;
+	text-decoration: none;
+}
+
+ul.contact {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 0;
+}
+
+ul.contact li {
+    display: inline-block;
+    margin-right: 1em;
+    list-style: none;
+    color: #aaa6ab;
+    font-size: .6em;
+}
+
+footer ul.contact li:last-child {
+    margin-right: 0;
+}
+
+.contact li i {
+    color: #aaa6ab;
+}
+
+.contact li i:hover {
+    color: #5e5d5d;
+}
+
+@media screen and (min-width: 700px)  {
+	.paper, .paper-before {
+		min-height: 768px;
+	}
+}
+
+@media screen and (max-width: 1110px) {
+	.paper, .paper-before {
+		margin-left: 4.5rem;
+		margin-right: 4.5rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	header {
+		padding: .6rem 1rem 2.5rem;
+	}
+	nav ul li {
+		margin: 0 .3rem 0 0;
+	}
+	nav ul li:first-child {
+    margin-right: 1em;
+	}
+	.nav-button {
+		width: 2rem;
+		height: 2rem;
+		z-index: 99;
+		bottom: 2rem;
+	}
+	.nav-button i {
+		top: 0;
+		font-size: 1.5rem;
+	}
+	.paper-before {
+		display: none;
+	}
+	.paper, .paper-before {
+		min-height: 536px;
+		margin: 0 0;
+		box-shadow: none;
+		padding: 5rem .5rem 5rem .8rem;
+	}
+	footer {
+		padding: 1rem .5rem;
+	}
+	ul.contact {
+		padding-left: 0;
+		position: relative;
+	}
+	.date-index {
+		right: .5rem;
+		transform: none;
+		text-align: right;
+	}
+	#cal-year.cal-year {
+		font-size: 3em;
+	}
+	div.cal-body {
+		width: 95%;
+	}
+	#cal-month.cal-month {
+		font-size: .7em;
+	}
+}
