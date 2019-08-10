@@ -4,7 +4,7 @@
             <li><i class="fa fa-paper-plane-o"></i></li>
 			<!--get the nav links in  _config.yml -->
 			{% for link in site.nav %}
-			<li><a href="{{ link[1]}}">{{ link[0] }}</a></li>
+			<li><a href="{{ site.baseurl }}{{ link[1]}}">{{ link[0] }}</a></li>
 			{% endfor %}
         </ul>
     </nav>
