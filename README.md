@@ -5,7 +5,7 @@ A simple but beautiful [Jekyll](http://jekyllrb.com/) theme for diary blog. Read
 
 [Live demo.](https://soyaine.github.io/jekyll-theme-diary/)
 
-![Screenshot](/assets/img/jekyll-theme-diary-screenshot.jpg)
+![Screenshot](/assets/img/jekyll-theme-diary-screenshot-light.jpg)
 
 Features
 -------
