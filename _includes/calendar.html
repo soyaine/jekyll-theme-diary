@@ -1,17 +1,15 @@
-<!--日历组件-->
 <div id="calendar" class="calendar">
+    <div id="dateTable" class="cal-table">
+        <div id="calHeader" class="cal-body">
+            <div id="calYear" class="calheader-item cal-year">
+                <i id="lastYearBtn" class="btn fa fa-angle-left"></i>
+                <label class="now">2017</label>
+                <i id="nextYearBtn" class="btn fa fa-angle-right"></i>
+            </div>
+            <i id="closeBtn" class="calheader-item btn fa fa-close"></i>
+        </div>
 
-    <i id="closeBtn" class="btn fa fa-close" style="display: block"></i>
-
-    <div id="cal-year" class="cal-year">
-        <i id="lastYearBtn" class="btn fa fa-angle-left"></i>
-        <label>2017</label>
-        <i id="nextYearBtn" class="btn fa fa-angle-right"></i>
-    </div>
-
-    <div id="dateTable" class="cal-body">
-
-        <ul id="cal-month" class="cal-month">
+        <ul id="calMonth" class="cal-body cal-month">
             <li title="0">Jan</li>
             <li title="1">Feb</li>
             <li title="2">Mar</li>
@@ -23,23 +21,23 @@
             <li title="8">Sep</li>
             <li title="9">Oct</li>
             <li title="10">Nov</li>
-            <li title="11" class="cal-this-month">Dec</li>
+            <li title="11" class="cal-month__now">Dec</li>
         </ul>
 
-        <ul id="cal-week" class="cal-body cal-week">
-            <li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li>
+        <ul id="calWeek" class="cal-body cal-week">
+            <li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li>
         </ul>
 
         <ul id="cal-day1" class="cal-body cal-body-day">
             <li id="2016/11/27" class="cal-day">27</li>
             <li id="2016/11/28" class="cal-day">28</li>
             <li id="2016/11/29" class="cal-day">29</li>
-            <li id="2016/11/30" class="cal-day"><a href="#">30</a></li>
+            <li id="2016/11/30" class="cal-day">30</li>
             <li id="2016/12/1" class="cal-day">1</li>
-            <li id="2016/12/2" class="cal-day cal-now">2</li>
+            <li id="2016/12/2" class="cal-day">2</li>
             <li id="2016/12/3" class="cal-day">3</li>
         </ul>
-        <ul id="cal-day2" class="cal-body cal--body-day">
+        <ul id="cal-day2" class="cal-body cal-body-day">
             <li id="2016/12/4" class="cal-day">4</li>
             <li id="2016/12/5" class="cal-day">5</li>
             <li id="2016/12/6" class="cal-day">6</li>
@@ -85,7 +83,6 @@
             <li id="2017/1/7" class="cal-day">7</li>
         </ul>
     </div>
-
 </div>
 
 
@@ -93,11 +90,17 @@
     var urlJSON = {
     {% for post in site.posts %}
     "{{ post.url | slice: 1, 10 | replace: '-', '/' | replace: '/0', '/' | strip }}": {
-        url: "{{ site.baseurl }}{{ post.url }}" ,
-                excerpt: "{{ post.excerpt }}"
+        url: "{{ site.baseurl }}{{ post.url }}",
+        excerpt: "{{ post.excerpt }}",
+        index: {{ forloop.rindex }}
     },
     {% endfor %}
     "end": "end"
     };
+    {% if page.date %}
+    var activeArticle = "{{ page.date | slice: 0, 10 | replace: '-', '/' | replace: '/0', '/' }}";
+    {% else %}
+    var activeArticle = new Date().toLocaleDateString();
+    {% endif %}
 </script>
-<script type="text/javascript" src="/diary/js/calendar.js"></script>
+<script type="text/javascript" src="/assets/js/calendar.js"></script>
