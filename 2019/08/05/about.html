@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/jekyll-theme-diary/assets/css/main.css">
+    <link rel="stylesheet" href="/jekyll-theme-diary/assets/css/font-awesome.min.css">
+    <title>All about this theme</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><i class="fa fa-paper-plane-o"></i></li>
+			<!--get the nav links in  _config.yml -->
+			
+			<li><a href="/">Home</a></li>
+			
+			<li><a href="/diary">Diary</a></li>
+			
+        </ul>
+    </nav>
+
+    
+    <a id="oldPostBtn" class="btn nav-button" href="/jekyll-theme-diary/2018/02/04/nos-tulit-videt" title="上一篇"><i class="btn fa fa-3x fa-angle-left"></i></a>
+    
+
+    
+    <a id="nextPostBtn" class="btn nav-button" href="/jekyll-theme-diary/2019/08/06/sorores-dicta" title="下一篇"><i class="btn fa fa-3x fa-angle-right"></i></a>
+    
+</header>
+<div class="content">
+    <div class="paper paper-before" id="paperBefore"></div>
+    <div class="paper paper-article">
+        <!-- Date No. sign -->
+        <a href="#" title="点击查看日历">
+        <span id="openBtn" class="date-index">
+            No.<span id="postIndex"></span><br>
+                <!--Date YYYY-MM-DD-->
+            2019-08-05
+        </span>
+        </a>
+        
+        <!--Calendar body-->
+        <div id="calendar" class="calendar">
+    <div id="dateTable" class="cal-table">
+        <div id="calHeader" class="cal-body">
+            <div id="calYear" class="calheader-item cal-year">
+                <i id="lastYearBtn" class="btn fa fa-angle-left"></i>
+                <label class="now">2017</label>
+                <i id="nextYearBtn" class="btn fa fa-angle-right"></i>
+            </div>
+            <i id="closeBtn" class="calheader-item btn fa fa-close"></i>
+        </div>
+
+        <ul id="calMonth" class="cal-body cal-month">
+            <li title="0">Jan</li>
+            <li title="1">Feb</li>
+            <li title="2">Mar</li>
+            <li title="3">Apr</li>
+            <li title="4">May</li>
+            <li title="5">Jun</li>
+            <li title="6">Jul</li>
+            <li title="7">Aug</li>
+            <li title="8">Sep</li>
+            <li title="9">Oct</li>
+            <li title="10">Nov</li>
+            <li title="11" class="cal-month__now">Dec</li>
+        </ul>
+
+        <ul id="calWeek" class="cal-body cal-week">
+            <li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li>
+        </ul>
+
+        <ul id="cal-day1" class="cal-body cal-body-day">
+            <li id="2016/11/27" class="cal-day">27</li>
+            <li id="2016/11/28" class="cal-day">28</li>
+            <li id="2016/11/29" class="cal-day">29</li>
+            <li id="2016/11/30" class="cal-day">30</li>
+            <li id="2016/12/1" class="cal-day">1</li>
+            <li id="2016/12/2" class="cal-day">2</li>
+            <li id="2016/12/3" class="cal-day">3</li>
+        </ul>
+        <ul id="cal-day2" class="cal-body cal-body-day">
+            <li id="2016/12/4" class="cal-day">4</li>
+            <li id="2016/12/5" class="cal-day">5</li>
+            <li id="2016/12/6" class="cal-day">6</li>
+            <li id="2016/12/7" class="cal-day">7</li>
+            <li id="2016/12/8" class="cal-day">8</li>
+            <li id="2016/12/9" class="cal-day">9</li>
+            <li id="2016/12/10" class="cal-day">10</li>
+        </ul>
+        <ul id="cal-day3" class="cal-body cal-body-day">
+            <li id="2016/12/11" class="cal-day">11</li>
+            <li id="2016/12/12" class="cal-day">12</li>
+            <li id="2016/12/13" class="cal-day">13</li>
+            <li id="2016/12/14" class="cal-day">14</li>
+            <li id="2016/12/15" class="cal-day">15</li>
+            <li id="2016/12/16" class="cal-day">16</li>
+            <li id="2016/12/17" class="cal-day">17</li>
+        </ul>
+        <ul id="cal-day4" class="cal-body cal-body-day">
+            <li id="2016/12/18" class="cal-day">18</li>
+            <li id="2016/12/19" class="cal-day">19</li>
+            <li id="2016/12/20" class="cal-day">20</li>
+            <li id="2016/12/21" class="cal-day">21</li>
+            <li id="2016/12/22" class="cal-day">22</li>
+            <li id="2016/12/23" class="cal-day">23</li>
+            <li id="2016/12/24" class="cal-day">24</li>
+        </ul>
+        <ul id="cal-day5" class="cal-body cal-body-day">
+            <li id="2016/12/25" class="cal-day">25</li>
+            <li id="2016/12/26" class="cal-day">26</li>
+            <li id="2016/12/27" class="cal-day">27</li>
+            <li id="2016/12/28" class="cal-day">28</li>
+            <li id="2016/12/29" class="cal-day">29</li>
+            <li id="2016/12/30" class="cal-day">30</li>
+            <li id="2016/12/31" class="cal-day">31</li>
+        </ul>
+        <ul id="cal-day6" class="cal-body cal-body-day">
+            <li id="2017/1/1" class="cal-day">1</li>
+            <li id="2017/1/2" class="cal-day">2</li>
+            <li id="2017/1/3" class="cal-day">3</li>
+            <li id="2017/1/4" class="cal-day">4</li>
+            <li id="2017/1/5" class="cal-day">5</li>
+            <li id="2017/1/6" class="cal-day">6</li>
+            <li id="2017/1/7" class="cal-day">7</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    var urlJSON = {
+    
+    "2019/8/6": {
+        url: "/jekyll-theme-diary/2019/08/06/sorores-dicta",
+        excerpt: "",
+        index: 3
+    },
+    
+    "2019/8/5": {
+        url: "/jekyll-theme-diary/2019/08/05/about",
+        excerpt: "",
+        index: 2
+    },
+    
+    "2018/2/4": {
+        url: "/jekyll-theme-diary/2018/02/04/nos-tulit-videt",
+        excerpt: "",
+        index: 1
+    },
+    
+    "end": "end"
+    };
+    
+    var activeArticle = "2019/8/5";
+    
+</script>
+<script type="text/javascript" src="/jekyll-theme-diary/assets/js/calendar.js"></script>
+    
+        <!--Article body-->
+        <article class="typo">
+            <link rel="stylesheet" href="/jekyll-theme-diary/assets/css/syntax.css">
+<p>When I first tried to write this theme two years ago, I just started my learning on JS and CSS. So it could be more emotional to call it my first baby. To do my best to design a simple and beautiful one, I had read The Non-Designer’s Design Book before I started to draft by PS in my clumsy hands. Thank goodness, the result is not bad. I still love the colorless page even now.</p>
+
+<p>That’s not the whole story. Another reason why I put the diary element here, is the desire to develop a habit of keeping a diary. Through all of my Soyaine Daily (My diaries name) life, it just has a little reader. When I began to write, I only sent one friend the URL. Although it always surprises me when she mentioned something in my diaries during chatting. I told myself, I just write to myself, for myself, other than anyone else.</p>
+
+<p>After around 100 posts, I closed my site. Then I started to write in my local folder with no style.</p>
+
+<p>The diary helped me to start writing down, and the journal lasts a long time beyond my expectation. It’s my beginning to jag my life fragments down, in the bytes. I’m not good at memorizing. I always forgot lots of details after the time passed. The words take a lot of pictures of my life. It’s a romantic way to listen to myself as an older me by words.</p>
+
+<p>So I rewrite the theme, I’ll be happy if it can help you also.</p>
+
+        </article>
+    </div>        
+</div>
+	<footer>
+    <span class="copyright">© 2017-2019 YourName</span>
+    <div>
+        <p class="comment">
+            <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+            Theme <a href="https://github.com/soyaine/jekyll-theme-diary">Diary</a> 
+            by <a href="https://github.com/soyaine">Soyaine</a><br>
+		</p>
+        
+		<ul class="contact">
+            <li><a href="https://github.com/yourname"><i class="fa fa-2x fa-github"></i> </a> </li>
+            <li><a href="https://twitter.com/yourname"><i class="fa fa-2x fa-twitter"></i> </a> </li>
+            <li><a href="mailto:yourname@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
+        </ul>
+	</div>
+</footer>
+</body>
+</html>

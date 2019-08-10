@@ -217,3 +217,5 @@ pip-log.txt
 
 #site files
 _site
+
+.sass-cache/
