@@ -1,0 +1,13 @@
+@import "predefine";
+
+* {
+  visibility: visible;
+}
+
+.typo a {
+  color: $theme;
+  &:hover {
+    text-decoration-color: $theme;
+    -moz-text-decoration-color: $theme;
+  }
+}

@@ -1,9 +1,10 @@
 /**
  * Created by soyaine on 2016/12/3.
+ * Last update: 2019/08/08
  */
 
 
-function eventAttach(){
+function eventAttach() {
     var cal = document.getElementById("calendar");
     var paperA = document.getElementById("paperBefore");
 
@@ -11,13 +12,11 @@ function eventAttach(){
 
         openCal: function(){
             cal.style.display = "block";
-            cal.style.visibility = "visible";
             paperA.style.backgroundColor = "#fc8f96";
         },
 
         closeCal: function(){
             cal.style.display = "none";
-            cal.style.visibility = "hidden";
             paperA.style.backgroundColor = "#fff";
         }
     };
@@ -29,45 +28,51 @@ function eventAttach(){
     openBtn.addEventListener('click', event.openCal, false);
 }
 
-function calInit(){
+function calInit() {
     var cal = {
         today: new Date(),
-        on: new Date(), //当前最后一篇文章的日期
+        on: new Date(activeArticle), // The page's date
         dateEle: document.getElementsByClassName("cal-day"),
         render : {},
 
-        url: {
-            "2016/12/4": "http://soyaine.cn",
-            "2016/12/5": "http://soyaine.cn",
-            "2016/12/6": "http://soyaine.cn",
-            "2016/12/7": "http://soyaine.cn",
-            "2016/12/8": "http://soyaine.cn"
-        },
+        url: {},
 
-        loadCal : function(){
+        loadCal : function() {
             var render = this.render;
             var elem = this.dateEle;
             var i = 0;
+
+            var y = this["on"].getFullYear();
+            var m = this["on"].getMonth();
+
+            var yEle = document.getElementById("calYear");
+            var mEle = document.getElementById("calMonth");
+
             for(var day in render){
                 elem[i].setAttribute("id", day);
+                var month = new Date(day).getMonth();
+
                 if(render[day].url){
                     elem[i].innerHTML = "<a href='" + render[day].url + "'>" + render[day].date + "</a>";
                 }else {
                     elem[i].innerText = render[day].date;
                 }
+
+                if (day === this.today.toLocaleDateString()) {
+                    elem[i].classList.add("now");
+                }
+
+                if (month !== m) {
+                    elem[i].classList.add("outmonth");
+                }
+
                 i++;
             }
 
-            var y = this["on"].getFullYear();
-            var m = this["on"].getMonth();
-
-            var yEle = document.getElementById("cal-year");
-            var mEle = document.getElementById("cal-month");
-
             yEle.children[1].innerText = y;
-            var mThis = mEle.getElementsByClassName("cal-this-month");
-            mThis[0].classList.remove("cal-this-month");
-            mEle.children[m].classList.add("cal-this-month");
+            var mThis = mEle.getElementsByClassName("cal-month__now");
+            mThis[0].classList.remove("cal-month__now");
+            mEle.children[m].classList.add("cal-month__now");
         },
 
         //som: (function(){
@@ -76,7 +81,7 @@ function calInit(){
         //    return new Date(first.getYear(), first.getMonth(), -first.getDay());
         //}())
 
-        loadLink: function(){
+        loadLink: function() {
             //var url = this.url;
             var url = urlJSON;
             for (var n in url){
@@ -90,15 +95,15 @@ function calInit(){
             }
         },
 
-        loadDate: function(first){
+        loadDate: function(first) {
                 // 根据任意日期，获取此月日历中第一个周一的日期
                 first.setDate(1);
                 var y = first.getFullYear();
                 var m = first.getMonth();
                 var w = first.getDay();
                 if(!w) w = 7; // 针对周日的 getDay() 值为0 的处理，将0转化为7
-                first = new Date(y, m, 2-w); // 以周一为第一天
-                //first = new Date(y, m, 1-w); // 以周日为第一天
+                // first = new Date(y, m, 2-w); // 以周一为第一天
+                first = new Date(y, m, 1-w); // 以周日为第一天
 
                 // 遍历获取所有日期
                 var arr = {};
@@ -114,29 +119,50 @@ function calInit(){
                 return arr;
         },
 
-        //loadList: function(){
-        //    var list = document.getElementById("urlList");
-        //    var url = {};
-        //    for(var li in list.children){
-        //        var date = list.children[li].innerText;
-        //        url[date] = list.children[li].href;
-        //    }
-        //    this.url = url;
-        //},
+        loadPageIndex: function() {
+            if (activeArticle && urlJSON[activeArticle]) {
+                var indexEle = document.getElementById("postIndex");
+                indexEle.innerText = urlJSON[activeArticle]['index'];
+            }
+        },
 
-        init: function(){
+        init: function() {
             this.render = this.loadDate(this["on"]);
+            this.loadPageIndex();
             this.loadCal();
-            //this.loadList();
             this.loadLink();
         }
     };
 
-    var monthNav = document.getElementById("cal-month");
-    monthNav.addEventListener('click', function(event){
-        var month = event.target.title;
-        cal.on.setMonth(+month);
+    var removeActiveNow = function() {
+        var onEles = document.getElementsByClassName("cal-day now");
+        
+        if (onEles.length) {
+            onEles[0].classList.remove("now");
+        }
+    };
+
+    var swtich = function(y, m) {
+        removeActiveNow();
+        cal.on.setFullYear(y);
+        cal.on.setMonth(m);
         cal.init();
+    };
+
+    var monthNav = document.getElementById("calMonth");
+    monthNav.addEventListener('click', function(event) {
+        var month = event.target.title;
+        swtich(cal.on.getFullYear(), +month);
+    }, false);
+
+    var lastYearBtn = document.getElementById("lastYearBtn");
+    var nextYearBtn = document.getElementById("nextYearBtn");
+
+    lastYearBtn.addEventListener('click', function() {
+        swtich(cal.on.getFullYear() - 1, 11)
+    }, false);
+    nextYearBtn.addEventListener('click', function() {
+        swtich(cal.on.getFullYear() + 1, 0)
     }, false);
 
     cal.init();
@@ -144,10 +170,9 @@ function calInit(){
 
 
 
-function init(){
+function init() {
     calInit();
     eventAttach();
-
 }
 
 init();

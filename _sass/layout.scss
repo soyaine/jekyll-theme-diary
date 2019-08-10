@@ -1,0 +1,33 @@
+@media screen and (min-width: $layout-breakpoint-medium)  {
+	.paper-before {
+        min-height: 578px;
+	}
+}
+
+@media screen and (max-width: $layout-breakpoint-medium)  {
+	.paper {
+        box-shadow: none;
+	}
+}
+
+@media screen and (max-width: $layout-breakpoint-small)  {
+	.paper {
+        padding: 5rem 1em;
+        text-align: justify;
+    }
+    #openBtn {
+        text-align: left;
+        right: auto;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+    header {
+        padding: 1.6rem 1rem 4rem;
+    }
+    footer {
+        padding: 2rem 1rem;
+    }
+}

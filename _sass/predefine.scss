@@ -1,0 +1,34 @@
+/* theme define the color of the second paper and all links */
+$theme: #ff8a80;
+$text: #616161;
+$text-light: #e0e0e0;
+
+$layout-breakpoint-small: 650px;
+$layout-breakpoint-medium: 1024px;
+
+
+@mixin center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@mixin circle-box {
+  border-radius: 50%;;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@mixin transition-prop($property) {
+  transition: .3s $property ease-in;
+  -webkit-transition: .3s $property ease-in;
+  -moz-transition: .3s $property ease-in;
+  -ms-transition: .3s $property ease-in;
+  -o-transition: .3s $property ease-in;
+}
