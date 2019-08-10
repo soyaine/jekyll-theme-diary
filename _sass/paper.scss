@@ -1,0 +1,29 @@
+@import "predefine";
+
+.content {
+    max-width: 920px;
+    position: relative;
+    margin: -3rem  auto;
+}
+
+.paper {
+    position: relative;
+    padding: 5rem 5rem;
+    background-color: #fff;
+    box-shadow:
+            0 0 3px rgba(0, 0, 0, 0.1),
+            -5px -5px 10px rgba(0, 0, 0, 0.04),
+            -10px -10px 40px rgba(0, 0, 0, 0.04),
+            inset 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.paper-before {
+    display: block;
+    content: "";
+    position: absolute;
+    transform: rotate(-10deg) translate(-2.6rem, 5rem);
+    -webkit-transform: rotate(-10deg) translate(-2.6rem, 5rem);
+    -moz-transform: rotate(-10deg) translate(-2.6rem, 5rem);
+    -ms-transform: rotate(-10deg) translate(-2.6rem, 5rem);
+    -o-transform: rotate(-10deg) translate(-2.6rem, 5rem);
+}

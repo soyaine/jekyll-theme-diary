@@ -1,16 +1,16 @@
 	<footer>
-    <span class="copyright">© 2017 {{ site.name }}</span>
+    <span class="copyright">© {% if site.start %}{{ site.start }}-{% endif %}{{ site.now }} {{ site.name }}</span>
     <div>
         <p class="comment">
-			Theme designed by <a href="https://github.com/soyaine/jekyll-theme-diary">Soyaine</a><br>
-			Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com">GitHub</a>
+            <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+            Theme <a href="https://github.com/soyaine/jekyll-theme-diary">Diary</a> 
+            by <a href="https://github.com/soyaine">Soyaine</a><br>
 		</p>
         
 		<ul class="contact">
-            <li><a href="{{ site.link.jianshu }}"><i class="fa fa-3x fa-book"></i></a></li>
-            <li><a href="https://github.com/{{ site.link.github }}"><i class="fa fa-3x fa-github"></i> </a> </li>
-            <li><a href="https://twitter.com/{{ site.link.twitter }}"><i class="fa fa-3x fa-twitter"></i> </a> </li>
-            <li><a href="mailto:{{ site.link.email }}"><i class="fa fa-envelope fa-3x"></i></a></li>
+            <li><a href="https://github.com/{{ site.link.github }}"><i class="fa fa-2x fa-github"></i> </a> </li>
+            <li><a href="https://twitter.com/{{ site.link.twitter }}"><i class="fa fa-2x fa-twitter"></i> </a> </li>
+            <li><a href="mailto:{{ site.link.email }}"><i class="fa fa-envelope fa-2x"></i></a></li>
         </ul>
 	</div>
 </footer>

@@ -1,0 +1,195 @@
+---
+---
+@import "style";
+@import "typo";
+@import "paper";
+@import "calendar";
+
+* {
+    font-family: "Microsoft YaHei UI";
+}
+body {
+    margin: 0 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn, .btn i {
+    cursor: pointer;
+
+    &:hover {
+        color: $theme;
+    }
+}
+
+/****** Header *******/
+header {
+    z-index: -10;
+    padding: 1.6rem 10rem 4rem;
+    color: #aaa6ab;
+    background-color: #fafafa;
+    font-weight: 300;
+    font-size: large;
+    box-sizing: border-box;
+}
+
+span.logo {
+    left: 0;
+    width: auto;
+}
+
+nav {
+    position: relative;
+
+}
+
+nav ul {
+    padding-left: 0;
+    display: block;
+    position: relative;
+    align-content: stretch;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 3.6em 0 0;
+    list-style: none;
+    color: #aaa6ab;
+}
+
+nav ul li a {
+	 color: #aaa6ab;
+}
+
+nav ul li a:hover {
+	 color: #5e5d5d;
+}
+
+nav ul li:first-child {
+    margin-right: 5em;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-button {
+    position: fixed;
+    height: 100%;
+    width: 6rem;
+    align-content: center;
+}
+
+.nav-button i {
+    color: #dfdfe2;
+    position: absolute;
+    top: 46%;
+}
+
+#oldPostBtn {
+    left: 0;
+}
+
+#nextPostBtn, #nextPostBtn i {
+    right: 0;
+}
+
+.nav-button:hover i {
+    font-size: 5em;
+    color: #5e5d5d;
+}
+/****** The paper body *******/
+.date-index {
+    z-index: 10;
+    text-align: center;
+    position: absolute;
+    top: 1.1em;
+    right: 0;
+    transform: rotate(45deg);
+
+    font-family: "Algerian";
+    font-size: 1.4em;
+    color: #e4dcdb;
+
+    -webkit-transition: text-shadow, color, color 1s;
+    -moz-transition: text-shadow, color 1s;
+    -ms-transition: text-shadow, color 1s;
+    -o-transition: text-shadow, color 1s;
+    transition: text-shadow, color 1s;
+}
+
+.date-index:hover {
+    color: #fc8f96;
+    text-shadow: #dfdfe2 1px 1px 5px;
+}
+
+
+/****** Footer *******/
+footer {
+    z-index: 999;
+    position: relative;
+    /*bottom: 4rem;*/
+    padding: 3rem 10rem;
+    color: #aaa6ab;
+    background-color: #fafafa;
+    font-weight: 400;
+    /*font-size: small;*/
+    box-sizing: border-box;
+}
+
+footer div {
+    position: relative;
+}
+
+footer span.copyright {
+    color: #5e5d5d;
+    font-weight: bold;
+    width: inherit;
+}
+
+.comment {
+    position: relative;
+    margin: 1em 1px;
+    font-size: .9em;
+}
+
+.comment a {
+	color: #aaa6ab;
+}
+
+.comment a:hover {
+    font-weight: 400;
+    color: #5e5d5d;
+	text-decoration: none;
+}
+
+ul.contact {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 0;
+}
+
+ul.contact li {
+    display: inline-block;
+    margin-right: 1em;
+    list-style: none;
+    color: #aaa6ab;
+    font-size: .6em;
+}
+
+footer ul.contact li:last-child {
+    margin-right: 0;
+}
+
+.contact li i {
+    color: #aaa6ab;
+}
+
+.contact li i:hover {
+    color: #5e5d5d;
+}
+
+@import "layout";
