@@ -1,7 +1,7 @@
 Theme Diary for Jekyll
 ======================
 
-A simple but beautiful [Jekyll](http://jekyllrb.com/) theme for diary blog. Read my story about it [here](http://soyaine.github.io/jekyll-theme-diary/).
+A simple but beautiful [Jekyll](http://jekyllrb.com/) theme for diary blog. Read my story about it [here](https://soyaine.github.io/jekyll-theme-diary/2019/08/05/about).
 
 [Live demo.](https://soyaine.github.io/jekyll-theme-diary/)
 
