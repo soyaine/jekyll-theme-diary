@@ -1,5 +1,6 @@
 name: YourName
 permalink: :year/:month/:day/:title
+baseurl: /jekyll-theme-diary
 
 # Your blog's start year and this year, showed in the footer left
 # start is optional
