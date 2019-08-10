@@ -3,5 +3,5 @@ layout: default
 title: {{ page.title }}
 ---
 
-<link rel="stylesheet" href="/assets/css/syntax.css">
+<link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
 {{ page.content }}

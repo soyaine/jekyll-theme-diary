@@ -1,9 +1,3 @@
-@media screen and (min-width: $layout-breakpoint-medium)  {
-	.paper-before {
-        min-height: 578px;
-	}
-}
-
 @media screen and (max-width: $layout-breakpoint-medium)  {
 	.paper {
         box-shadow: none;
@@ -29,5 +23,17 @@
     }
     footer {
         padding: 2rem 1rem;
+    }
+    #dateTable {
+        width: 100%;
+        padding: 0;
+    }
+    #calMonth {
+        overflow: scroll;
+    }
+    .cal-week, .cal-body-day, #calHeader {
+        padding-left: 1em;
+        padding-right: 1em;
+        box-sizing: border-box;
     }
 }
