@@ -109,7 +109,7 @@ function calInit() {
                 var arr = {};
                 for(var i = 0; i < 42; i++){
                     var date = first.getDate();
-                    var dateStr = first.toLocaleDateString();
+                    var dateStr = `${first.getFullYear()}/${first.getMonth()+1}/${first.getDate()}`;
                     arr[dateStr] = {
                         "date": date
                         //"url": null
